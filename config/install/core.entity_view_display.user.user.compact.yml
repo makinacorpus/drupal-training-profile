@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_firstname
+    - field.field.user.user.field_interests
+    - field.field.user.user.field_lastname
+    - field.field.user.user.field_newsletter
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  member_for:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_firstname: true
+  field_interests: true
+  field_lastname: true
+  field_newsletter: true
+  langcode: true
+  user_picture: true

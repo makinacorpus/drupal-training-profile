@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: short
+label: 'Editorial short date'
+locked: false
+pattern: d/m/Y

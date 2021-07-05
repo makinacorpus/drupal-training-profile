@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: -9
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'create image media'
+  - 'create pokemon content'
+  - 'delete own image media'
+  - 'delete own pokemon content'
+  - 'edit own pokemon content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'translate pokemon node'
+  - 'use text format basic_html'
+  - 'view media'
+  - 'view own unpublished content'

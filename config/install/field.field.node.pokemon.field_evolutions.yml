@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evolutions
+    - node.type.pokemon
+id: node.pokemon.field_evolutions
+field_name: field_evolutions
+entity_type: node
+bundle: pokemon
+label: Evolutions
+description: 'Select the different evolutions of the pokemon. <b>Put them in order by step.</b>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pokemon: pokemon
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

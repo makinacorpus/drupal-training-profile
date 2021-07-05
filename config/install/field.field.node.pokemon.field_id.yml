@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_id
+    - node.type.pokemon
+id: node.pokemon.field_id
+field_name: field_id
+entity_type: node
+bundle: pokemon
+label: 'Pokemon id'
+description: 'The pockedex id of the pokemon.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 898
+  prefix: '# '
+  suffix: ''
+field_type: integer

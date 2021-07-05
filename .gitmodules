@@ -1,0 +1,12 @@
+[submodule "themes/training_theme"]
+	path = themes/training_theme
+	url = https://gitlab.com/formation-drupal/tools/training-theme.git
+[submodule "modules/training_content"]
+	path = modules/training_content
+	url = https://gitlab.com/formation-drupal/tools/training-content.git
+[submodule "modules/training_module"]
+	path = modules/training_module
+	url = https://gitlab.com/formation-drupal/tools/training-module.git
+[submodule "modules/training_correction"]
+	path = modules/training_correction
+	url = https://gitlab.com/formation-drupal/tools/training-correction.git

@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: teaser
+label: 'Teaser (450x152)'
+effects:
+  208f2d14-12d5-430d-abb1-b8653deb3a35:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 450
+      height: 152
+      anchor: center-center

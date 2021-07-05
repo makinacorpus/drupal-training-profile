@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_evolutions
+    - field.field.node.pokemon.field_generation
+    - field.field.node.pokemon.field_id
+    - field.field.node.pokemon.field_media
+    - field.field.node.pokemon.field_types
+    - field.field.node.pokemon.field_weaknesses
+    - node.type.pokemon
+  module:
+    - user
+id: node.pokemon.teaser
+targetEntityType: node
+bundle: pokemon
+mode: teaser
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_id:
+    type: number_integer
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_media:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+  field_types:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_evolutions: true
+  field_generation: true
+  field_weaknesses: true
+  langcode: true

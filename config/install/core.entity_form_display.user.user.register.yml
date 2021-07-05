@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.user.register
+    - field.field.user.user.field_firstname
+    - field.field.user.user.field_interests
+    - field.field.user.user.field_lastname
+    - field.field.user.user.field_newsletter
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.register
+targetEntityType: user
+bundle: user
+mode: register
+content:
+  account:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_interests:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_newsletter:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  contact: true
+  field_firstname: true
+  field_lastname: true
+  langcode: true
+  language: true
+  timezone: true
+  user_picture: true

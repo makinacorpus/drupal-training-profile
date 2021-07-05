@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: full
+label: 'Full (1920x650)'
+effects:
+  fa265b65-74b6-469e-bd06-becbb0833654:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 650
+      anchor: center-center

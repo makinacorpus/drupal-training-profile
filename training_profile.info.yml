@@ -1,0 +1,48 @@
+name: Training profile
+type: profile
+description: 'Install pre-configured site for training session.'
+core_version_requirement:  ^8 || ^9
+install:
+  # core
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  - comment
+  - contact
+  - menu_link_content
+  - datetime
+  - telephone
+  - block_content
+  - editor
+  - help
+  - image
+  - media
+  - media_library
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - search
+  - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  - workflows
+  - content_moderation
+  - language
+  - content_translation
+  - automated_cron
+
+themes:
+  - bartik
+  - seven

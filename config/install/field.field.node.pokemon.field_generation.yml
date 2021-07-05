@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_generation
+    - node.type.pokemon
+    - taxonomy.vocabulary.pokemon_generation
+id: node.pokemon.field_generation
+field_name: field_generation
+entity_type: node
+bundle: pokemon
+label: Generation
+description: 'Generation from which the pokemon appears.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      pokemon_generation: pokemon_generation
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

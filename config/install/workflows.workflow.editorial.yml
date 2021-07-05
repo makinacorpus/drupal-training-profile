@@ -1,0 +1,74 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.pokemon
+  module:
+    - content_moderation
+id: editorial
+label: Editorial
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: true
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+    to_be_moderated:
+      published: false
+      default_revision: false
+      label: 'To be moderated'
+      weight: -1
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 0
+    archived_draft:
+      label: 'Restore to Draft'
+      from:
+        - archived
+      to: draft
+      weight: 1
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -3
+      from:
+        - draft
+        - published
+        - to_be_moderated
+    publish:
+      label: Publish
+      to: published
+      weight: -1
+      from:
+        - published
+        - to_be_moderated
+    to_be_moderated:
+      label: 'To be moderated'
+      from:
+        - draft
+        - published
+        - to_be_moderated
+      to: to_be_moderated
+      weight: -2
+  entity_types:
+    node:
+      - article
+      - pokemon
+  default_moderation_state: draft

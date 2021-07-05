@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pokemon type'
+vid: pokemon_type
+description: 'References the type of the pokemon.'
+weight: 0

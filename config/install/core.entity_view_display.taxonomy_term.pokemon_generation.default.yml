@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pokemon_generation.field_blue
+    - field.field.taxonomy_term.pokemon_generation.field_red
+    - field.field.taxonomy_term.pokemon_generation.field_released
+    - taxonomy.vocabulary.pokemon_generation
+  module:
+    - datetime
+    - text
+id: taxonomy_term.pokemon_generation.default
+targetEntityType: taxonomy_term
+bundle: pokemon_generation
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_blue:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_red:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_released:
+    weight: 3
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  langcode: true
