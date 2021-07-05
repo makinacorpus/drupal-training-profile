@@ -12,7 +12,7 @@ This profile is a support for Drupal training sessions. It works alone but can b
 First, get the `training_profil` and put it in your Drupal profiles folder. 
 
 ```
-git clone git@gitlab.makina-corpus.net:formation/back-end/drupal-profile-training-profile.git training_profile
+git clone https://gitlab.com/formation-drupal/tools/training-profile.git
 ```
 
 Depending on the training to be given, you can complete this profile with the appropriate submodules.
