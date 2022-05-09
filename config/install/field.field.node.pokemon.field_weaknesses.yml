@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_weaknesses
     - node.type.pokemon
-    - taxonomy.vocabulary.pokemon_type
+    - taxonomy.vocabulary.type
 id: node.pokemon.field_weaknesses
 field_name: field_weaknesses
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      pokemon_type: pokemon_type
+      type: type
     sort:
       field: name
       direction: asc

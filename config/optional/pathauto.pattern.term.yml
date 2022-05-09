@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: term
+label: Term
+type: 'canonical_entities:taxonomy_term'
+pattern: '/[term:vocabulary]/[term:name]'
+selection_criteria:
+  d13e4bae-f3f3-4dad-a442-5736416a0d72:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: d13e4bae-f3f3-4dad-a442-5736416a0d72
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      news: news
+      pokemon_generation: pokemon_generation
+      pokemon_type: pokemon_type
+  9e7b8dc0-b25e-4eec-97b7-72098f5d04cf:
+    id: language
+    negate: false
+    uuid: 9e7b8dc0-b25e-4eec-97b7-72098f5d04cf
+    context_mapping:
+      language: 'taxonomy_term:langcode:language'
+    langcodes:
+      en: en
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'taxonomy_term:langcode:language':
+    label: Language

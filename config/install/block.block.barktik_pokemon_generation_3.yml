@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:generation:265d2dc2-ae1b-4c0c-b2be-1f3df3dd2ce0'
+  module:
+    - block_content
+    - node
+    - system
+  theme:
+    - bartik
+id: barktik_pokemon_generation_3
+theme: bartik
+region: sidebar_first
+weight: 4
+provider: null
+plugin: 'block_content:265d2dc2-ae1b-4c0c-b2be-1f3df3dd2ce0'
+settings:
+  id: 'block_content:265d2dc2-ae1b-4c0c-b2be-1f3df3dd2ce0'
+  label: 'Pokemon generation 3'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      pokemon: pokemon
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/pokemon/generation-3/*'

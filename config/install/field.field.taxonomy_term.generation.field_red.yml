@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_red
+    - taxonomy.vocabulary.generation
+id: taxonomy_term.generation.field_red
+field_name: field_red
+entity_type: taxonomy_term
+bundle: generation
+label: Red
+description: 'Name of the red game.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

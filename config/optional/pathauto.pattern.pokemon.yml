@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: pokemon
+label: Pokemon
+type: 'canonical_entities:node'
+pattern: '/[node:content-type]/[node:field_generation]/[node:title]'
+selection_criteria:
+  c132484a-f62f-41d7-9084-1c594ef04e86:
+    id: node_type
+    negate: false
+    uuid: c132484a-f62f-41d7-9084-1c594ef04e86
+    context_mapping:
+      node: node
+    bundles:
+      pokemon: pokemon
+  d005d301-9e2c-45fd-992d-799f60995d56:
+    id: language
+    negate: false
+    uuid: d005d301-9e2c-45fd-992d-799f60995d56
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      en: en
+      fr: fr
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

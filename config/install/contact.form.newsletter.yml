@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: newsletter
+label: Newsletter
+recipients:
+  - webmaster@pokemon.local
+reply: 'Thank you for your subscription.'
+weight: 0
+message: 'Thank you for your subscription.'
+redirect: /

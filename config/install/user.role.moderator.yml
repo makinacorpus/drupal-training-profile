@@ -1,28 +1,58 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.full_html
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.article
+    - node.type.page
+    - node.type.pokemon
+    - taxonomy.vocabulary.news
+    - taxonomy.vocabulary.generation
+    - taxonomy.vocabulary.type
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - content_translation
+    - file
+    - filter
+    - locale
+    - media
+    - node
+    - search
+    - system
+    - taxonomy
+    - toolbar
 id: moderator
 label: Moderator
 weight: -7
 is_admin: null
 permissions:
-  - 'access administration pages'
   - 'access content overview'
   - 'access files overview'
   - 'access media overview'
   - 'access taxonomy overview'
   - 'access toolbar'
   - 'access user profiles'
+  - 'administer menu'
+  - 'administer site configuration'
   - 'create article content'
   - 'create audio media'
+  - 'create content translations'
   - 'create document media'
+  - 'create image media'
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
   - 'create terms in news'
-  - 'create terms in pokemon_generation'
-  - 'create terms in pokemon_type'
+  - 'create terms in generation'
+  - 'create terms in type'
   - 'create video media'
+  - 'delete all revisions'
   - 'delete any article content'
   - 'delete any audio media'
   - 'delete any document media'
@@ -33,10 +63,12 @@ permissions:
   - 'delete any remote_video media'
   - 'delete any video media'
   - 'delete article revisions'
+  - 'delete content translations'
   - 'delete media'
   - 'delete own article content'
   - 'delete own audio media'
   - 'delete own document media'
+  - 'delete own image media'
   - 'delete own page content'
   - 'delete own pokemon content'
   - 'delete own remote_video media'
@@ -44,8 +76,8 @@ permissions:
   - 'delete page revisions'
   - 'delete pokemon revisions'
   - 'delete terms in news'
-  - 'delete terms in pokemon_generation'
-  - 'delete terms in pokemon_type'
+  - 'delete terms in generation'
+  - 'delete terms in type'
   - 'edit any article content'
   - 'edit any audio media'
   - 'edit any document media'
@@ -62,26 +94,39 @@ permissions:
   - 'edit own remote_video media'
   - 'edit own video media'
   - 'edit terms in news'
-  - 'edit terms in pokemon_generation'
-  - 'edit terms in pokemon_type'
+  - 'edit terms in generation'
+  - 'edit terms in type'
+  - 'revert all revisions'
   - 'revert article revisions'
   - 'revert page revisions'
   - 'revert pokemon revisions'
   - 'translate any entity'
   - 'translate article node'
   - 'translate editable entities'
+  - 'translate interface'
   - 'translate news taxonomy_term'
   - 'translate page node'
-  - 'translate pokemon_generation taxonomy_term'
-  - 'translate pokemon_type taxonomy_term'
+  - 'translate pokemon node'
+  - 'translate generation taxonomy_term'
+  - 'translate type taxonomy_term'
   - 'update any media'
+  - 'update content translations'
   - 'update media'
   - 'use advanced search'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition to_be_moderated'
   - 'use text format full_html'
   - 'view all media revisions'
   - 'view all revisions'
+  - 'view any unpublished content'
   - 'view article revisions'
+  - 'view latest version'
   - 'view own unpublished content'
+  - 'view own unpublished media'
   - 'view page revisions'
   - 'view pokemon revisions'
   - 'view the administration theme'
+  - 'view user email addresses'

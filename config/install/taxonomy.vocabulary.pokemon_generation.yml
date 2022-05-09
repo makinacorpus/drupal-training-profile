@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Pokemon generation'
-vid: pokemon_generation
-description: 'Reference the game generations.'
-weight: 0

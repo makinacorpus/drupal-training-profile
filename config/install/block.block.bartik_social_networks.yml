@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_networks:8f3dc671-e488-4a20-b456-c2c6e10df190'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: bartik_social_networks
+theme: bartik
+region: footer_fifth
+weight: -8
+provider: null
+plugin: 'block_content:8f3dc671-e488-4a20-b456-c2c6e10df190'
+settings:
+  id: 'block_content:8f3dc671-e488-4a20-b456-c2c6e10df190'
+  label: 'Social networks'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

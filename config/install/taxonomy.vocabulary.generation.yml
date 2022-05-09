@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pokemon generation'
+vid: generation
+description: 'Reference the pokemon generations.'
+weight: 0

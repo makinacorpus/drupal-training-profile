@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: generation
+label: 'Pokemon generation'
+revision: 0
+description: 'Display informations about a pokemon generation.'

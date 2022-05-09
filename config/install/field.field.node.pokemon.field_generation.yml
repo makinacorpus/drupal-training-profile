@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_generation
     - node.type.pokemon
-    - taxonomy.vocabulary.pokemon_generation
+    - taxonomy.vocabulary.generation
 id: node.pokemon.field_generation
 field_name: field_generation
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      pokemon_generation: pokemon_generation
+      generation: generation
     sort:
       field: name
       direction: asc

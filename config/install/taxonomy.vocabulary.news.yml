@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'News type'
+name: 'News'
 vid: news
 description: 'References the subjects of the articles.'
 weight: 0

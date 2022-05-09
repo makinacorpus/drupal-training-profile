@@ -3,17 +3,19 @@ status: true
 dependencies:
   config:
     - field.field.node.article.body
-    - field.field.node.article.comment
+    - field.field.node.article.field_date
     - field.field.node.article.field_featured_media
     - field.field.node.article.field_news
     - node.type.article
     - workflows.workflow.editorial
   module:
-    - comment
     - content_moderation
+    - datetime
     - media_library
     - path
     - text
+_core:
+  default_config_hash: Drsd6imFF5Lr7StSKq3OpK68e-3a5wzRVVD23qmZnjU
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -21,7 +23,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -29,70 +31,70 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 8
+  created:
+    type: datetime_timestamp
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-  created:
-    type: datetime_timestamp
-    weight: 5
+  field_date:
+    type: datetime_default
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured_media:
     type: media_library_widget
-    weight: 1
+    weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
   field_news:
-    weight: 2
+    type: options_select
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 3
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
-    settings: {  }
+    weight: 13
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 8
+    region: content
     settings:
       display_label: true
-    weight: 6
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 11
+    region: content
     settings:
       display_label: true
-    weight: 10
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 7
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -102,9 +104,14 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS

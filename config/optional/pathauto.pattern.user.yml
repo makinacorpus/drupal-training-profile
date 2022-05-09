@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - user
+id: user
+label: User
+type: 'canonical_entities:user'
+pattern: '/user/[user:account-name]'
+selection_criteria:
+  b8f4cde0-e079-4baa-8361-e676b05c6997:
+    id: language
+    negate: false
+    uuid: b8f4cde0-e079-4baa-8361-e676b05c6997
+    context_mapping:
+      language: 'user:langcode:language'
+    langcodes:
+      en: en
+      fr: fr
+selection_logic: and
+weight: -5
+relationships:
+  'user:langcode:language':
+    label: Language

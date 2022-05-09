@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.newsletter
+    - field.storage.contact_message.field_consent
+id: contact_message.newsletter.field_consent
+field_name: field_consent
+entity_type: contact_message
+bundle: newsletter
+label: 'I have read the privacy policy'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

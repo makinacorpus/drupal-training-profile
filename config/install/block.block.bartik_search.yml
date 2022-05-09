@@ -8,7 +8,7 @@ dependencies:
 id: bartik_search
 theme: bartik
 region: sidebar_first
-weight: -6
+weight: 2
 provider: null
 plugin: search_form_block
 settings:

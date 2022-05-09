@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: mentions
+label: 'Legal mentions'
+description: 'For legal information pages.'
+locked: false

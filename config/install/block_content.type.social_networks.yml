@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: social_networks
+label: 'Social networks'
+revision: 0
+description: 'Display social networks.'
