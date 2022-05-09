@@ -1,0 +1,17 @@
+services:
+  # See core.services.yml for logger factory and channels.
+  logger.channel.training_profile:
+    parent: logger.channel_base
+    arguments: ['training_profile']
+
+  training_profile.install_helper:
+    class: Drupal\training_profile\Service\InstallHelper
+    factory: Drupal\training_profile\Service\InstallHelperFactory::create
+    arguments:
+      - '@path_alias.manager'
+      - '@entity_type.manager'
+      - '@state'
+      - '@file_system'
+      - '@module_handler'
+      - '@language_manager'
+      - '@logger.channel.training_profile'

@@ -1,0 +1,8 @@
+id,username,reference-file-user_picture,role,field_firstname,field_lastname,reference-taxonomy_term-field_interests,field_newsletter
+1,Professeur Chen,"image:22",moderator,Yukinari,Chen,"news:1,news:2,news:3,news:4,news:5",1
+2,Sacha,"image:23",redactor,Sacha,du Bourg Palette,"news:1,news:2,news:3,news:4,news:5",1
+3,Pierre,"image:24",redactor,Pierre,Takeshi,"news:1,news:2,news:3,news:4,news:5",1
+4,Ondine,"image:25",redactor,Ondine,Yawa,"news:1,news:2,news:3,news:4,news:5",1
+5,Pika33,"image:26",,Corentin,Brayard,"news:1,news:2",0
+6,DarkV94,"image:27",,Simon,Pelissier,"news:1,news:4",1
+7,Magic Unicorn,"image:28",,Karine,Meillon,"news:3,news:5",1

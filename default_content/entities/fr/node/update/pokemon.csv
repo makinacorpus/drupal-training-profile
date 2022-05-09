@@ -1,0 +1,10 @@
+id,reference-node-field_evolutions
+1,"pokemon:2,pokemon:3"
+2,"pokemon:1,pokemon:3"
+3,"pokemon:1,pokemon:2"
+4,"pokemon:5,pokemon:6"
+5,"pokemon:4,pokemon:6"
+6,"pokemon:4,pokemon:5"
+7,"pokemon:8,pokemon:9"
+8,"pokemon:7,pokemon:9"
+9,"pokemon:7,pokemon:8"

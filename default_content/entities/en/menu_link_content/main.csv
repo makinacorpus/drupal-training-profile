@@ -1,0 +1,4 @@
+id,title,link,weight,parent
+1,Pokedex,internal:/pokemons,1,
+2,Articles,internal:/articles,2,
+3,Newsletter,internal:/contact/newsletter,3,
