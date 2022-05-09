@@ -1,47 +1,55 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file
  * Prepare environnement for the training installation profile.
  */
 
+use Drupal\language\Entity\ConfigurableLanguage;
+
 /**
- *
- * Perform actions to set up the site for this profile.
- *
- * @see system_install()
+ * Implements hook_install_tasks().
  */
-function training_profile_install() {
-  // Assign user 1 the "administrator" role.
+function training_profile_install_tasks(&$install_state) {
+  return [
+    'training_profile_add_administrator_role' => [],
+    'training_profile_manage_languages' => [],
+    'training_profile_add_contents' => [],
+  ];
+}
+
+/**
+ * Assigns administrator status to user 1.
+ */
+function training_profile_add_administrator_role() {
   $user = \Drupal::entityTypeManager()
     ->getStorage('user')
     ->load(1);
   $user->roles[] = 'administrator';
   $user->save();
 
-  // We install some menu links, so we have to rebuild the router, to ensure the
-  // menu links are valid.
   \Drupal::service('router.builder')->rebuildIfNeeded();
+}
 
-  // Populate the default shortcut set.
-  $shortcut =  \Drupal::entityTypeManager()
-    ->getStorage('shortcut')
-    ->create([
-      'shortcut_set' => 'default',
-      'title' => t('Add content'),
-      'weight' => -20,
-      'link' => ['uri' => 'internal:/node/add'],
-    ]);
-  $shortcut->save();
+/**
+ * Add 'en' language for an installation made with the language 'fr'.
+ */
+function training_profile_manage_languages() {
+  $enabledLanguages = \array_keys(
+    \Drupal::languageManager()->getLanguages()
+  );
+  if (!\in_array('en', $enabledLanguages)) {
+    $language = ConfigurableLanguage::createFromLangcode('en');
+    $language->save();
+  }
+}
 
-  $shortcut =  \Drupal::entityTypeManager()
-    ->getStorage('shortcut')
-    ->create([
-      'shortcut_set' => 'default',
-      'title' => t('All content'),
-      'weight' => -19,
-      'link' => ['uri' => 'internal:/admin/content'],
-  ]);
-  $shortcut->save();
-
+/**
+ * Adds contents.
+ */
+function training_profile_add_contents() {
+  \Drupal::service('training_profile.install_helper')
+    ->importContents();
 }

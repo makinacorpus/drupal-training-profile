@@ -1,47 +1,53 @@
 name: Training profile
 type: profile
 description: 'Install pre-configured site for training session.'
-core_version_requirement:  ^8 || ^9
+core_version_requirement: ^9
+interface translation project: training_profile
+interface translation server pattern: profiles/training_profile/translations/%project.%language.po
+distribution:
+  name: Training profile
+
+version: 1.2
+
 install:
   # core
-  - node
+  - automated_cron
+  - big_pipe
   - block
+  - block_content
   - breakpoint
   - ckeditor
   - color
   - config
-  - comment
   - contact
-  - menu_link_content
+  - content_moderation
+  - content_translation
   - datetime
-  - telephone
-  - block_content
-  - editor
-  - help
-  - image
-  - media
-  - media_library
-  - menu_ui
-  - options
-  - path
-  - page_cache
-  - dynamic_page_cache
-  - big_pipe
-  - taxonomy
   - dblog
-  - search
-  - shortcut
-  - toolbar
+  - dynamic_page_cache
+  - editor
   - field_ui
   - file
+  - help
+  - image
+  - language
+  - locale
+  - media
+  - media_library
+  - menu_link_content
+  - menu_ui
+  - node
+  - options
+  - page_cache
+  - path
   - rdf
+  - search
+  - taxonomy
+  - telephone
+  - toolbar
   - views
   - views_ui
   - workflows
-  - content_moderation
-  - language
-  - content_translation
-  - automated_cron
 
 themes:
   - bartik

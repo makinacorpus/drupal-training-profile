@@ -1,0 +1,12 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: training_profile\\n"
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\\n"
+
+msgid "Install pre-configured site for training session."
+msgstr "Site préconfiguré pour la formation drupal."
+msgid "@site is currently under maintenance. We should be back shortly. Thank you for your patience. <a href="example.com">Visit our site.</a>"
+msgstr "@site est en cours de maintenance. Nous serons de retour très bientôt. Merci de votre patience. <a href="example.com">Visiter notre site.</a>"
