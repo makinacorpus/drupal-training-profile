@@ -2,11 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_blue
     - field.field.node.pokemon.field_evolutions
     - field.field.node.pokemon.field_generation
     - field.field.node.pokemon.field_id
-    - field.field.node.pokemon.field_media
+    - field.field.node.pokemon.field_featured_media
+    - field.field.node.pokemon.field_red
     - field.field.node.pokemon.field_types
     - field.field.node.pokemon.field_weaknesses
     - node.type.pokemon
@@ -15,70 +16,75 @@ dependencies:
     - content_moderation
     - media_library
     - path
-    - text
 id: node.pokemon.default
 targetEntityType: node
 bundle: pokemon
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 3
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_blue:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_evolutions:
-    weight: 8
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_generation:
-    weight: 4
+    type: entity_reference_autocomplete
+    weight: 6
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_id:
+    type: number
     weight: 2
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
-  field_media:
+  field_featured_media:
     type: media_library_widget
-    weight: 5
+    weight: 7
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
+  field_red:
+    type: string_textarea
+    weight: 5
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_types:
-    weight: 6
+    type: entity_reference_autocomplete
+    weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_weaknesses:
-    weight: 7
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   langcode:
     type: language_select
     weight: 0
@@ -88,36 +94,36 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 16
-    settings: {  }
+    weight: 18
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 14
+    region: content
     settings:
       display_label: true
-    weight: 12
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 17
+    region: content
     settings:
       display_label: true
-    weight: 15
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 15
+    region: content
     settings:
       display_label: true
-    weight: 13
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -128,18 +134,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
   translation:
-    weight: 11
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 11
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }

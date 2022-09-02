@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Categories'
+vid: tags
+description: 'References the subjects of the articles.'
+weight: 0

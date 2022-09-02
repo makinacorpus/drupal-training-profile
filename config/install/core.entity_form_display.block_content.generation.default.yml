@@ -10,7 +10,7 @@ bundle: generation
 mode: default
 content:
   field_generation:
-    type: options_select
+    type: entity_reference_autocomplete
     weight: 1
     region: content
     settings: {  }

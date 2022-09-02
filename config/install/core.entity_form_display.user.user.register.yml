@@ -24,7 +24,7 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: entity_reference_autocomplete
     region: content
   field_newsletter:
     weight: 2

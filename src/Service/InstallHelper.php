@@ -171,16 +171,16 @@ class InstallHelper {
       ->importContentsFromFile('media', 'image')
       ->importContentsFromFile('taxonomy_term', 'type')
       ->importContentsFromFile('taxonomy_term', 'generation')
-      ->importContentsFromFile('taxonomy_term', 'news')
+      ->importContentsFromFile('taxonomy_term', 'tags')
       ->importContentsFromFile('user', 'user')
       ->importContentsFromFile('node', 'page')
       ->importContentsFromFile('node', 'article')
       ->importContentsFromFile('node', 'pokemon')
       ->importContentsFromFile('node', 'pokemon', 'update')
-      // ->importContentsFromFile('menu_link_content', 'main')
-      // ->importContentsFromFile('menu_link_content', 'footer')
-      // ->importContentsFromFile('menu_link_content', 'credits')
-      // ->importContentsFromFile('menu_link_content', 'generations')
+      ->importContentsFromFile('menu_link_content', 'main')
+      ->importContentsFromFile('menu_link_content', 'footer')
+      ->importContentsFromFile('menu_link_content', 'mentions')
+      ->importContentsFromFile('menu_link_content', 'generations')
       ->importContentsFromFile('block_content', 'social_networks')
       ->importContentsFromFile('block_content', 'generation');
   }
@@ -852,7 +852,10 @@ class InstallHelper {
   ): array {
     $values = [];
     if ('create' === $op) {
-      $mail = \sprintf('%s@mail.fr', \trim($data['username']));
+      $mail = \sprintf(
+        '%s@mail.fr',
+        \strtolower(\str_replace(' ', '', $data['username']))
+      );
       $values = [
         'type' => $entityType,
         'name' => \trim($data['username']),
@@ -1203,7 +1206,7 @@ class InstallHelper {
     if (!empty($fields)) {
       foreach ($fields as $fieldName => $inputs) {
         $inputs = \trim($inputs);
-        $elements = \explode(',', $inputs);
+        $elements = \explode('|', $inputs);
         foreach ($elements as $input) {
           $values[$fieldName][] = ['value' => $input];
         }
@@ -1309,7 +1312,7 @@ class InstallHelper {
     foreach ($links as $reference => $referenceValue) {
       $elements = \explode('-', $reference);
       $fieldName = \trim($elements[1]);
-      $contents = \array_filter(\explode(',', $referenceValue));
+      $contents = \array_filter(\explode('|', $referenceValue));
       foreach ($contents as $link) {
         $href = \explode('@', $link);
         $values[$fieldName][] = [
@@ -1340,7 +1343,7 @@ class InstallHelper {
       $elements = \explode('-', $reference);
       $entityType = \trim($elements[1]);
       $fieldName = \trim($elements[2]);
-      $targets = \array_filter(\explode(',', $referenceValue));
+      $targets = \array_filter(\explode('|', $referenceValue));
 
       foreach ($targets as $target) {
         $target = \explode(':', $target);
@@ -1389,7 +1392,7 @@ class InstallHelper {
       $elements = \explode('-', $paragraph);
       $entityType = \trim($elements[1]);
       $field_name = \trim($elements[2]);
-      $targets = \array_filter(\explode(',', $paragraphValue));
+      $targets = \array_filter(\explode('|', $paragraphValue));
 
       foreach ($targets as $target) {
         $target = \explode(':', $target);

@@ -5,14 +5,12 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_date
     - field.field.node.article.field_featured_media
-    - field.field.node.article.field_news
+    - field.field.node.article.field_tags
     - node.type.article
   module:
     - datetime
     - text
     - user
-_core:
-  default_config_hash: 2ctJsRi8Abpi4vT0acnZ3ZcN6CVxmmT7ni8DeLay37U
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -20,7 +18,7 @@ mode: default
 content:
   body:
     type: text_default
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
     weight: 4
@@ -48,7 +46,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_news:
+  field_tags:
     type: entity_reference_label
     label: above
     settings:
