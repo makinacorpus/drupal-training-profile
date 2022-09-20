@@ -5,7 +5,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_featured_media
     - node.type.page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - media_library
@@ -18,7 +17,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 3
     region: content
     settings:
       rows: 9
@@ -28,68 +27,73 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured_media:
-    weight: 1
+    type: media_library_widget
+    weight: 2
+    region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-    type: media_library_widget
-    region: content
   langcode:
     type: language_select
-    weight: 2
+    weight: 0
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
-    settings: {  }
+    weight: 11
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
-    weight: 5
-    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
+    weight: 9
+    region: content
     settings:
       display_label: true
-    weight: 8
-    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
+    weight: 7
+    region: content
     settings:
       display_label: true
-    weight: 6
-    region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS

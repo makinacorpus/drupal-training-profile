@@ -4,9 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.pokemon
-    - system.menu.main
     - taxonomy.vocabulary.generation
-    - taxonomy.vocabulary.news
+    - taxonomy.vocabulary.type
   module:
     - node
     - taxonomy
@@ -114,22 +113,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_id_value:
+          id: field_id_value
+          table: node__field_id
+          field: field_id_value
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-          order: DESC
+          plugin_id: standard
+          order: ASC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -257,7 +253,7 @@ display:
             identifier: field_types_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -278,7 +274,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          vid: news
+          vid: type
           type: select
           hierarchy: false
           limit: true
@@ -344,6 +340,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -368,10 +365,10 @@ display:
       display_extenders: {  }
       path: pokemons
       menu:
-        type: normal
+        type: none
         title: Pokedex
         description: ''
-        weight: 1
+        weight: -49
         expanded: false
         menu_name: main
         parent: ''

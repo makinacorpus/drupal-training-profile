@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles_recent
+  module:
+    - node
+    - views
+  theme:
+    - olivero
+id: olivero_views_articles_recent
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: 'views_block:articles_recent-block_1'
+settings:
+  id: 'views_block:articles_recent-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

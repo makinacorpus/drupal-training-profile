@@ -1,5 +1,5 @@
 {
-    "name": "zewebmaster/training_profile",
+    "name": "makina-corpus/training_profile",
     "description": "Module in charge of creating contents for the Drupal training session.",
     "type": "drupal-profile",
     "extra": {
