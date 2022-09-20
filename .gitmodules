@@ -1,6 +1,9 @@
 [submodule "modules/training_module"]
 	path = modules/training_module
-	url = https://github.com/zewebmaster/Training-module.git
+	url = https://github.com/makinacorpus/drupal-training-module.git
 [submodule "modules/training_correction"]
 	path = modules/training_correction
-	url = https://github.com/zewebmaster/Training-correction.git
+	url = https://github.com/makinacorpus/drupal-training-correction.git
+[submodule "themes/training_theme"]
+	path = themes/training_theme
+	url = https://github.com/makinacorpus/drupal-training-theme.git
