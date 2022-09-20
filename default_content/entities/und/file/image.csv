@@ -1,29 +1,53 @@
 id,title,filename
 1,Team,us.jpg
 2,Legal mention,mentions.jpg
-3,Privacy,privacy.jpeg
+3,Privacy,privacy.jpg
 4,Pokemon fight,tournament.jpg
 5,25 years,25years.jpg
 6,Pokemon tournament,finales.jpg
 7,Pokemon legends,legends.jpg
 8,Pokemon challenge,challenge.jpg
 9,Pokemon Advanced battle,advanced_battle.jpg
-10,Bulbasaur,bulbasaur.png
-11,Ivysaur,ivysaur.png
-12,Venussaur,venussaur.png
-13,Charmander,charmander.png
-14,Charmeleon,charmeleon.png
-15,Charizard,charizard.png
-16,Squirtle,squirtle.png
-17,Wartortle,wartortle.png
-18,Blastoise,blastoise.png
-19,Tauros,tauros.png
-20,Lapras,lapras.png
-21,Mew,mew.png
-22,Chen,chen.jpeg
-23,Sacha,sacha.jpg
-24,Pierre,pierre.jpg
-25,Ondine,ondine.jpg
-26,Pika33,pika33.jpg
-27,Dark,dark.jpg
-28,Unicorn,unicorn.jpg
+10,Chen,chen.jpeg
+11,Sacha,sacha.jpg
+12,Pierre,pierre.jpg
+13,Ondine,ondine.jpg
+14,Pika33,pika33.jpg
+15,Dark,dark.jpg
+16,Unicorn,unicorn.jpg
+17,Bulbasaur,bulbasaur.png
+18,Ivysaur,ivysaur.png
+19,Venussaur,venussaur.png
+20,Charmander,charmander.png
+21,Charmeleon,charmeleon.png
+22,Charizard,charizard.png
+23,Squirtle,squirtle.png
+24,Wartortle,wartortle.png
+25,Blastoise,blastoise.png
+26,Articuno,articuno.png
+27,Zapdos,zapdos.png
+28,Moltres,moltres.png
+29,Chikorita,chikorita.png
+30,Bayleef,bayleef.png
+31,Meganium,meganium.png
+32,Cyndaquil,cyndaquil.png
+33,Quilava,quilava.png
+34,Typhlosion,typhlosion.png
+35,Totodile,totodile.png
+36,Croconaw,croconaw.png
+37,Feraligatr,feraligatr.png
+38,Raikou,raikou.png
+39,Entei,entei.png
+40,Suicune,suicune.png
+41,Treecko,treecko.png
+42,Grovyle,grovyle.png
+43,Sceptile,sceptile.png
+44,Torchic,torchic.png
+45,Combusken,combusken.png
+46,Blaziken,blaziken.png
+47,Mudkip,mudkip.png
+48,Marshtomp,marshtomp.png
+49,Swampert,swampert.png
+50,Regirock,regirock.png
+51,Regice,regice.png
+52,Registeel,registeel.png

@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.user.field_interests
-    - taxonomy.vocabulary.news
+    - taxonomy.vocabulary.tags
   module:
     - user
 id: user.user.field_interests
@@ -20,7 +20,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      news: news
+      tags: tags
     sort:
       field: name
       direction: asc

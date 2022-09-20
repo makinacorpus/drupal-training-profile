@@ -11,7 +11,7 @@ dependencies:
     - node.type.article
     - node.type.page
     - node.type.pokemon
-    - taxonomy.vocabulary.news
+    - taxonomy.vocabulary.tags
     - taxonomy.vocabulary.generation
     - taxonomy.vocabulary.type
     - workflows.workflow.editorial
@@ -48,7 +48,7 @@ permissions:
   - 'create media'
   - 'create page content'
   - 'create remote_video media'
-  - 'create terms in news'
+  - 'create terms in tags'
   - 'create terms in generation'
   - 'create terms in type'
   - 'create video media'
@@ -75,7 +75,7 @@ permissions:
   - 'delete own video media'
   - 'delete page revisions'
   - 'delete pokemon revisions'
-  - 'delete terms in news'
+  - 'delete terms in tags'
   - 'delete terms in generation'
   - 'delete terms in type'
   - 'edit any article content'
@@ -93,7 +93,7 @@ permissions:
   - 'edit own page content'
   - 'edit own remote_video media'
   - 'edit own video media'
-  - 'edit terms in news'
+  - 'edit terms in tags'
   - 'edit terms in generation'
   - 'edit terms in type'
   - 'revert all revisions'
@@ -104,7 +104,7 @@ permissions:
   - 'translate article node'
   - 'translate editable entities'
   - 'translate interface'
-  - 'translate news taxonomy_term'
+  - 'translate tags taxonomy_term'
   - 'translate page node'
   - 'translate pokemon node'
   - 'translate generation taxonomy_term'

@@ -3,83 +3,91 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.full
-    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_blue
     - field.field.node.pokemon.field_evolutions
     - field.field.node.pokemon.field_generation
     - field.field.node.pokemon.field_id
-    - field.field.node.pokemon.field_media
+    - field.field.node.pokemon.field_featured_media
+    - field.field.node.pokemon.field_red
     - field.field.node.pokemon.field_types
     - field.field.node.pokemon.field_weaknesses
     - node.type.pokemon
   module:
-    - text
     - user
 id: node.pokemon.full
 targetEntityType: node
 bundle: pokemon
 mode: full
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 4
+  content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    region: content
-  content_moderation_control:
     weight: 0
     region: content
+  field_blue:
+    type: basic_string
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_evolutions:
-    weight: 7
-    label: inline
+    type: entity_reference_entity_view
+    label: hidden
     settings:
-      link: true
+      view_mode: teaser
+      link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 8
     region: content
   field_generation:
-    weight: 3
-    label: inline
+    type: entity_reference_label
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_id:
-    weight: 1
-    label: inline
+    type: number_integer
+    label: hidden
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_media:
-    type: entity_reference_entity_view
     weight: 2
+    region: content
+  field_featured_media:
+    type: entity_reference_entity_view
     label: hidden
     settings:
       view_mode: large
       link: false
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_red:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_types:
     type: entity_reference_label
-    weight: 5
-    region: content
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-  field_weaknesses:
     weight: 6
-    label: inline
+    region: content
+  field_weaknesses:
+    type: entity_reference_label
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 7
     region: content
 hidden:
   langcode: true

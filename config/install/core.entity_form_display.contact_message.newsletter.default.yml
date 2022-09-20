@@ -4,7 +4,7 @@ dependencies:
   config:
     - contact.form.newsletter
     - field.field.contact_message.newsletter.field_consent
-    - field.field.contact_message.newsletter.field_news
+    - field.field.contact_message.newsletter.field_tags
     - field.field.contact_message.newsletter.field_postal_code
 id: contact_message.newsletter.default
 targetEntityType: contact_message
@@ -23,7 +23,7 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
-  field_news:
+  field_tags:
     type: options_buttons
     weight: 2
     region: content

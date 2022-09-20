@@ -1,0 +1,4 @@
+ignored_config_entities:
+  - user.mail
+  - system.site
+  - mailsystem.settings

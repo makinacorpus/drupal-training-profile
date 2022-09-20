@@ -2,84 +2,135 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.pokemon.body
+    - field.field.node.pokemon.field_blue
     - field.field.node.pokemon.field_evolutions
     - field.field.node.pokemon.field_generation
     - field.field.node.pokemon.field_id
-    - field.field.node.pokemon.field_media
+    - field.field.node.pokemon.field_featured_media
+    - field.field.node.pokemon.field_red
     - field.field.node.pokemon.field_types
     - field.field.node.pokemon.field_weaknesses
     - node.type.pokemon
   module:
-    - text
     - user
 id: node.pokemon.default
 targetEntityType: node
 bundle: pokemon
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   content_moderation_control:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: -20
+    region: content
+  field_blue:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
   field_evolutions:
-    weight: 7
-    label: inline
+    type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 10
     region: content
   field_generation:
-    weight: 3
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
     type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 6
     region: content
   field_id:
-    weight: 1
-    label: inline
+    type: number_integer
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_media:
-    type: entity_reference_entity_view
     weight: 2
-    label: hidden
+    region: content
+  field_featured_media:
+    type: entity_reference_entity_view
+    label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 7
+    region: content
+  field_red:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
     region: content
   field_types:
-    weight: 5
-    label: inline
+    type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 8
     region: content
   field_weaknesses:
-    weight: 6
-    label: inline
+    type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 9
     region: content
-hidden:
-  langcode: true
-  links: true
+  langcode:
+    type: language
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  path:
+    type: path
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  translation:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+hidden: {  }

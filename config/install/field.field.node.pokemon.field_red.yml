@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_red
+    - node.type.pokemon
+id: node.pokemon.field_red
+field_name: field_red
+entity_type: node
+bundle: pokemon
+label: 'Red description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

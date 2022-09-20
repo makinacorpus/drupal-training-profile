@@ -16,7 +16,7 @@ selection_criteria:
     context_mapping:
       taxonomy_term: taxonomy_term
     bundles:
-      news: news
+      tags: tags
       pokemon_generation: pokemon_generation
       pokemon_type: pokemon_type
   9e7b8dc0-b25e-4eec-97b7-72098f5d04cf:

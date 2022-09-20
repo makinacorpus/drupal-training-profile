@@ -6,13 +6,12 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_date
     - field.field.node.article.field_featured_media
-    - field.field.node.article.field_news
+    - field.field.node.article.field_tags
     - node.type.article
   module:
     - datetime
     - user
-_core:
-  default_config_hash: g_NQbcKEblDHW2MDCd264DLbMJwJmu3BBNA6H-lkQ-E
+
 id: node.article.teaser
 targetEntityType: node
 bundle: article
@@ -41,7 +40,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_news:
+  field_tags:
     type: entity_reference_label
     label: inline
     settings:

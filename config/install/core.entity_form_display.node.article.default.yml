@@ -5,7 +5,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_date
     - field.field.node.article.field_featured_media
-    - field.field.node.article.field_news
+    - field.field.node.article.field_tags
     - node.type.article
     - workflows.workflow.editorial
   module:
@@ -14,8 +14,6 @@ dependencies:
     - media_library
     - path
     - text
-_core:
-  default_config_hash: Drsd6imFF5Lr7StSKq3OpK68e-3a5wzRVVD23qmZnjU
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -39,26 +37,30 @@ content:
     third_party_settings: {  }
   field_date:
     type: datetime_default
-    weight: 1
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured_media:
     type: media_library_widget
-    weight: 2
+    weight: 3
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_news:
-    type: options_select
+  field_tags:
+    type: entity_reference_autocomplete
     weight: 4
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
-    weight: 3
+    weight: 0
     region: content
     settings:
       include_locked: true
@@ -98,7 +100,7 @@ content:
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60

@@ -1,7 +1,7 @@
 id,title,link,weight,parent
-1,Generation 1,internal:/pokemon-generation/generation-1,1,
-2,Generation 2,internal:/pokemon-generation/generation-2,2,
-3,Generation 3,internal:/pokemon-generation/generation-3,3,
-4,Generation 4,internal:/pokemon-generation/generation-4,4,
-4,Generation 5,internal:/pokemon-generation/generation-5,5,
-4,Generation 6,internal:/pokemon-generation/generation-6,6,
+1,Génération 1,internal:/generation/generation-1,1,
+2,Génération 2,internal:/generation/generation-2,2,
+3,Génération 3,internal:/generation/generation-3,3,
+4,Génération 4,internal:/generation/generation-4,4,
+5,Génération 5,internal:/generation/generation-5,5,
+6,Génération 6,internal:/generation/generation-6,6,

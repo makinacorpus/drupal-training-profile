@@ -17,7 +17,6 @@ install:
   - block_content
   - breakpoint
   - ckeditor
-  - color
   - config
   - contact
   - content_moderation
@@ -43,12 +42,11 @@ install:
   - rdf
   - search
   - taxonomy
-  - telephone
   - toolbar
   - views
   - views_ui
   - workflows
 
 themes:
-  - bartik
-  - seven
+  - olivero
+  - claro
