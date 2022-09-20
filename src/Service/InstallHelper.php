@@ -213,13 +213,11 @@ class InstallHelper {
    * @return $this
    */
   protected function prepareDirectoryForMedia(): ?self {
-    $realpath = $this->fileSystem->realpath(self::MEDIA_UPLOAD_DIRECTORY);
-    if (!\file_exists($realpath)) {
-      $this->fileSystem->prepareDirectory(
-        $realpath,
-        FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS
-      );
-    }
+    $directory = self::MEDIA_UPLOAD_DIRECTORY;
+    $this->fileSystem->prepareDirectory(
+      $directory,
+      FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS
+    );
 
     return $this;
   }
