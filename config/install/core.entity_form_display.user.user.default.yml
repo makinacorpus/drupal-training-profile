@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_birthdate
     - field.field.user.user.field_firstname
     - field.field.user.user.field_interests
     - field.field.user.user.field_lastname
@@ -9,6 +10,7 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - datetime
     - image
     - user
 id: user.user.default
@@ -21,48 +23,54 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_firstname:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_interests:
+  field_birthdate:
+    type: datetime_default
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_buttons
+  field_firstname:
+    type: string_textfield
+    weight: 2
     region: content
-  field_lastname:
-    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_newsletter:
+  field_interests:
+    type: options_buttons
     weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lastname:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_newsletter:
+    type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
   language:
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
   user_picture:
     type: image_image
+    weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 0
-    region: content
 hidden:
   contact: true
   langcode: true
