@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
+    - field.field.user.user.field_birthdate
     - field.field.user.user.field_firstname
     - field.field.user.user.field_interests
     - field.field.user.user.field_lastname
@@ -21,6 +22,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_birthdate: true
   field_firstname: true
   field_interests: true
   field_lastname: true
