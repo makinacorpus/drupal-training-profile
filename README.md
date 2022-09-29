@@ -3,7 +3,8 @@
 This profile is a support for Drupal training sessions. It works alone but can be completed with three submodules:
 
 * `training_module`: for implementation examples,
-* `training_correction`: for the corrections of the exercises,
+* `training_correction`: for the correction of the exercises,
+* `training_theme`: for the correction of the theming exercises,
 
 ## Get the tools
 
@@ -20,7 +21,8 @@ Depending on the training to be given, you can complete this profile with the ap
 ```
 git submodule init modules/training_module
 git submodule init modules/training_correction
-git submodule update --remote
+git submodule init modules/training_theme
+git submodule update --recursive
 ```
 
 ## Install profile with Drush
