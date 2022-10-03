@@ -21,7 +21,7 @@ Depending on the training to be given, you can complete this profile with the ap
 ```
 git submodule init modules/training_module
 git submodule init modules/training_correction
-git submodule init modules/training_theme
+git submodule init themes/training_theme
 git submodule update --recursive
 ```
 
