@@ -16,9 +16,8 @@ git clone https://github.com/makinacorpus/drupal-training-profile.git training_p
 
 Depending on the training to be given, you can complete this profile with the appropriate submodules.
 
-##### Drupal dev
-
 ```
+git submodule init modules/training_migrate_content
 git submodule init modules/training_module
 git submodule init modules/training_correction
 git submodule init themes/training_theme
@@ -36,4 +35,10 @@ vendor/bin/drush si -y training_profile \
   --account-pass=admin \
   --site-mail=webmaster@training.local \
   --site-name="Training Drupal"
+```
+
+## Migrate content
+
+```bash
+bash web/profiles/training_profile/modules/training_migrate_content/script/migrate.sh
 ```

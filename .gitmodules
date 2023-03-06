@@ -7,3 +7,6 @@
 [submodule "themes/training_theme"]
 	path = themes/training_theme
 	url = https://github.com/makinacorpus/drupal-training-theme.git
+[submodule "modules/training_migrate_content"]
+	path = modules/training_migrate_content
+	url = git@github.com:makinacorpus/drupal-training-migrate-content.git
