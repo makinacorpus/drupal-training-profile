@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 name: 'Categories'
-vid: tags
+vid: tag
 description: 'References the subjects of the articles.'
 weight: 0

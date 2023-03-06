@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: generations
+label: 'Pokemon by generation'
+description: 'List of filtered views of pokemons by generation.'
+locked: false

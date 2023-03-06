@@ -4,7 +4,7 @@ dependencies:
   config:
     - contact.form.newsletter
     - field.storage.contact_message.field_tags
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tag
 id: contact_message.newsletter.field_tags
 field_name: field_tags
 entity_type: contact_message
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      tag: tag
     sort:
       field: name
       direction: asc

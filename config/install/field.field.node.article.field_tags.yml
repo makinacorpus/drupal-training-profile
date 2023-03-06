@@ -4,7 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_tags
     - node.type.article
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tag
 id: node.article.field_tags
 field_name: field_tags
 entity_type: node
@@ -19,7 +19,7 @@ settings:
   handler: 'default:taxonomy_term'
   handler_settings:
     target_bundles:
-      tags: tags
+      tag: tag
     sort:
       field: name
       direction: asc

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tag
   module:
     - taxonomy
     - user
@@ -250,7 +250,7 @@ display:
           entity_field: vid
           plugin_id: bundle
           value:
-            tags: tags
+            tag: tag
           expose:
             operator_limit_selection: false
             operator_list: {  }

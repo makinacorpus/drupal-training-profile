@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.tag
   module:
     - content_translation
 third_party_settings:
@@ -10,8 +10,8 @@ third_party_settings:
     enabled: true
     bundle_settings:
       untranslatable_fields_hide: '1'
-id: taxonomy_term.tags
+id: taxonomy_term.tag
 target_entity_type_id: taxonomy_term
-target_bundle: tags
+target_bundle: tag
 default_langcode: site_default
 language_alterable: true
