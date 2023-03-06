@@ -2,6 +2,7 @@
 
 This profile is a support for Drupal training sessions. It works alone but can be completed with three submodules:
 
+* `training_migrate_content` to create the training test content,
 * `training_module`: for implementation examples,
 * `training_correction`: for the correction of the exercises,
 * `training_theme`: for the correction of the theming exercises,
@@ -35,10 +36,14 @@ vendor/bin/drush si -y training_profile \
   --account-pass=admin \
   --site-mail=webmaster@training.local \
   --site-name="Training Drupal"
+
+vendor/bin/drush locale:check && vendor/bin/drush locale:update
+vendor/bin/drush cr
 ```
 
 ## Migrate content
 
 ```bash
+vendor/bin/drush en -y training_migrate_content
 bash web/profiles/training_profile/modules/training_migrate_content/script/migrate.sh
 ```
