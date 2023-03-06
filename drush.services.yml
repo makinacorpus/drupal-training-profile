@@ -1,7 +1,0 @@
-services:
-  uga.commands:
-    class: Drupal\training_profile\Commands\TrainingProfileCommands
-    arguments:
-      - '@training_profile.install_helper'
-    tags:
-      - { name: drush.command }

@@ -1,8 +1,0 @@
-id,username,reference-file-user_picture,role,field_firstname,field_lastname,reference-taxonomy_term-field_interests,field_newsletter,field_birthdate
-1,Professeur Chen,"image:10",moderator,Yukinari,Chen,"tags:1|tags:2|tags:3|tags:4|tags:5",1,1950-06-12
-2,Sacha,"image:11",redactor,Sacha,du Bourg Palette,"tags:1|tags:2|tags:3|tags:4|tags:5",1,1998-04-05
-3,Pierre,"image:12",redactor,Pierre,Takeshi,"tags:1|tags:2|tags:3|tags:4|tags:5",1,1999-11-18
-4,Ondine,"image:13",redactor,Ondine,Yawa,"tags:1|tags:2|tags:3|tags:4|tags:5",1,1998-06-25
-5,Pika33,"image:14",,Corentin,Brayard,"tags:1|tags:2",0,2004-12-15
-6,DarkV94,"image:15",,Simon,Pelissier,"tags:1|tags:4",1,1995-03-27
-7,Magic Unicorn,"image:16",,Karine,Meillon,"tags:3|tags:5",1,2002-09-05

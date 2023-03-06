@@ -16,7 +16,6 @@ function training_profile_install_tasks(&$install_state) {
   return [
     'training_profile_add_administrator_role' => [],
     'training_profile_manage_languages' => [],
-    'training_profile_add_contents' => [],
   ];
 }
 
@@ -44,12 +43,4 @@ function training_profile_manage_languages() {
     $language = ConfigurableLanguage::createFromLangcode('en');
     $language->save();
   }
-}
-
-/**
- * Adds contents.
- */
-function training_profile_add_contents() {
-  \Drupal::service('training_profile.install_helper')
-    ->importContents();
 }
